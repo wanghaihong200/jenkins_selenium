@@ -7,6 +7,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from jenkins_selenium.test import BasePath
 
 
 @allure.feature('Test Baidu WebUI')
@@ -35,7 +36,7 @@ class ISelenium(unittest.TestCase):
             print('使用无界面方式运行')
             chrome_options.add_argument("--headless")
 
-        self.driver = webdriver.Chrome(executable_path=config.get('driver', 'chrome_driver'),
+        self.driver = webdriver.Chrome(executable_path="chromedriver",
                                        options=chrome_options)
 
     @allure.story('Test key word 今日头条')
