@@ -7,7 +7,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
-from jenkins_selenium.test import BasePath
+from test import BasePath
 
 
 @allure.feature('Test Baidu WebUI')
